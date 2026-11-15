@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patient Registration Form</title>
+  </head>
+
+  <body>
+    <img src="Yolo21.png" height="100px" />
+
+    <h1>Patient Registration Form</h1>
+
+    <form>
+      <!-- Patient Personal Information -->
+      <fieldset>
+        <legend>Patient Personal Information</legend>
+
+        <table>
+          <!-- Patient Name -->
+          <tr>
+            <td>
+              <label for="PatientName">Patient Name:</label>
+            </td>
+
+            <td>
+              <input
+                type="text"
+                name="PatientName"
+                id="PatientName"
+                placeholder="Enter Your Name"
+              />
+
+              <span id="NameError"></span>
+            </td>
+          </tr>
+
+          <!-- Patient Age -->
+          <tr>
+            <td>
+              <label for="PatientAge">Patient Age:</label>
+            </td>
+
+            <td>
+              <input
+                type="number"
+                name="PatientAge"
+                id="PatientAge"
+                placeholder="Enter Your Age"
+              />
+
+              <span id="AgeError"></span>
+            </td>
+          </tr>
+
+          <!-- Patient Email -->
+          <tr>
+            <td>
+              <label for="PatientEmail">Patient Email:</label>
+            </td>
+
+            <td>
+              <input
+                type="email"
+                name="PatientEmail"
+                id="PatientEmail"
+                placeholder="Enter Your Email"
+              />
+
+              <span id="EmailError"></span>
+            </td>
+          </tr>
+
+          <!-- Gender -->
+          <tr>
+            <td>
+              <label>Gender:</label>
+            </td>
+
+            <td>
+              <input type="radio" name="gender" id="Male" value="Male" />
+
+              <label for="Male">Male</label>
+
+              <input type="radio" name="gender" id="Female" value="Female" />
+
+              <label for="Female">Female</label>
+
+              <br />
+
+              <span id="ErrorGender"></span>
+            </td>
+          </tr>
+
+          <!-- Medical History -->
+          <tr>
+            <td>
+              <label for="medicaldoc"> Medical History: </label>
+            </td>
+
+            <td>
+              <input type="file" name="file" id="medicaldoc" />
+            </td>
+          </tr>
+
+          <!-- DOB -->
+          <tr>
+            <td>
+              <label for="DOB">DOB:</label>
+            </td>
+
+            <td>
+              <input type="date" name="DOB" id="DOB" />
+            </td>
+          </tr>
+
+          <!-- Address -->
+          <tr>
+            <td>
+              <label for="Address">Address:</label>
+            </td>
+
+            <td>
+              <textarea id="Address" cols="20" rows="5" style="resize: none">
+              </textarea>
+            </td>
+          </tr>
+
+          <!-- Citizenship -->
+          <tr>
+            <td>
+              <label for="Citizen"> Citizenship: </label>
+            </td>
+
+            <td>
+              <select id="Citizen" name="Citizen">
+                <option value="">Select Country</option>
+
+                <option value="Bangladesh">Bangladesh</option>
+
+                <option value="USA">USA</option>
+
+                <option value="UK">UK</option>
+
+                <option value="Australia">Australia</option>
+
+                <option value="Japan">Japan</option>
+              </select>
+            </td>
+          </tr>
+
+          <!-- Doctor Department -->
+          <tr>
+            <td>
+              <label>Doctor Department:</label>
+            </td>
+
+            <td>
+              <input
+                type="checkbox"
+                id="DeptMedicine"
+                name="dept"
+                value="Medicine"
+              />
+
+              <label for="DeptMedicine"> Medicine </label>
+
+              <input
+                type="checkbox"
+                id="DeptCardiac"
+                name="dept"
+                value="Cardiac"
+              />
+
+              <label for="DeptCardiac"> Cardiac </label>
+
+              <input
+                type="checkbox"
+                id="DeptNeuro"
+                name="dept"
+                value="Neurology"
+              />
+
+              <label for="DeptNeuro"> Neurology </label>
+
+              <br />
+
+              <span id="DeptError"></span>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- User Information -->
+      <h3>User Info</h3>
+
+      <fieldset>
+        <table>
+          <!-- Username -->
+          <tr>
+            <td>
+              <label for="username"> User Name: </label>
+            </td>
+
+            <td>
+              <input type="text" id="username" />
+            </td>
+          </tr>
+
+          <!-- Password -->
+          <tr>
+            <td>
+              <label for="password"> Password: </label>
+            </td>
+
+            <td>
+              <input type="password" id="password" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- Buttons -->
+      <input type="submit" id="submit" value="Signup" />
+
+      <input type="reset" id="reset" value="Reset" />
+    </form>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
